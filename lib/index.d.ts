@@ -220,6 +220,8 @@ declare namespace $RefParser {
        * If set to `"ignore"`, then circular references will simply be ignored. No error will be thrown, but the `$Refs.circular` property will still be set to `true`.
        */
       circular?: boolean | 'ignore'
+
+      filter?: (value: object, pathFromRoot: string, local: boolean, path: string) => boolean
     }
   }
 
